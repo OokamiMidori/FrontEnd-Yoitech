@@ -13,18 +13,18 @@ export const UserLogin = () => {
             <Header />
             <CardLoginUser>
                 <div>
-                    <h2>Acesse o seu cadastro</h2>
+                    <h3>Acesse o seu cadastro</h3>
                     <h2>Candidato</h2>
                 </div>
                 <div className="form">
                     <div>
                     E-mail ou usuário
                 </div>
-                    <input value={userName} onChange={(e)=>setUserName(e.target.value)}/>
+                    <input value={userName} placeholder="E-mail ou Usúario" onChange={(e)=>setUserName(e.target.value)}/>
                 </div>
                 <div className="form">
                     <div>Senha</div>
-                    <input value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                    <input value={password} placeholder="Password" name="password" type="password" onChange={(e)=>setPassword(e.target.value)}/>
                 </div>
                 <button className="entrar">Entrar</button>
                 <button className="criarCadastro">Criar cadastro</button>

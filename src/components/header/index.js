@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import Emprego from '../../Img/Emprego.jp.svg'
+import Emprego from '../../assets/Emprego.jp.svg'
 import { getColors } from '../../utils/returnheaderscolor'
 import { HeadersContainer } from './styledHeader'
 import { goToAboutPage, goToCompanyPage, goToContactPage, goToHomePage } from '../../routes'

@@ -22,6 +22,7 @@ p{
 h2{
     background-color: white;
     margin: 5px;
+    color: #707070;
 }
 input{
     background-color: #D9E0E6;
@@ -64,5 +65,10 @@ div{
     font-family: Arial, Helvetica, sans-serif;
     border: none;
     cursor: pointer;
+}
+h3{
+    background-color: white;
+    margin: 5px;
+    color: #707070;
 }
 `

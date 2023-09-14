@@ -3,12 +3,14 @@ import styled from 'styled-components'
 export const HeadersContainer = styled.div`
 display: flex;
 flex-direction: row;
-width: 100%;
+width: 100vw;
 height: 80px;
 justify-content: space-between;
 align-items: center;
 row-gap: 80vw;
 background-color: ${(props) => props.color};
+padding-bottom: 5px;
+margin-bottom: 5px;
 div{
     display: flex;
     flex-direction: row;
@@ -36,8 +38,9 @@ img{
     border-radius: 80px;
     background-color: #A9AEB3 ;
     text-align: center;
-    border: 5px white solid;
+    border: 4px white solid;
     margin-left: 150px;
-   
+    height: 40px;
+    margin: 18px 150px;
 }
 `
