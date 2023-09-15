@@ -2,10 +2,13 @@ import { useState } from "react"
 import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
 import { CardLoginUser, LoginUserContainer } from "./styledUserLogin"
+import { useNavigate } from "react-router-dom"
+import { goToSingUpUserPage } from "../../routes"
 
 export const UserLogin = () => {
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
 
     
     return (
@@ -27,7 +30,7 @@ export const UserLogin = () => {
                     <input value={password} placeholder="Password" name="password" type="password" onChange={(e)=>setPassword(e.target.value)}/>
                 </div>
                 <button className="entrar">Entrar</button>
-                <button className="criarCadastro">Criar cadastro</button>
+                <button className="criarCadastro" onClick={()=>goToSingUpUserPage(navigate)}>Criar cadastro</button>
                 <p>Recuperar cadastro</p>
             </CardLoginUser>
             <Footer />

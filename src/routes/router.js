@@ -3,6 +3,8 @@ import {UserLogin} from "../Pages/Login User/index"
 import {CompanyLogin} from "../Pages/Login Empresa/index"
 import {AboutPage} from "../Pages/Sobre/index"
 import {ContatoPage} from "../Pages/Contato/index"
+import { SingUpUser } from "../Pages/Signup User";
+import { DetailUserPage } from "../Pages/Detalhes User";
 
 export const Router = () =>{
     return (
@@ -10,8 +12,8 @@ export const Router = () =>{
             <Routes>
                 <Route path="/" element={<UserLogin/>}/>
                 <Route path="/company" element={ <CompanyLogin/> }/>
-                {/* <Route path="/sigup-user" element={}/> */}
-                {/* <Route path="/sigup-company" element={}/> */}
+                <Route path="/singup-user" element={<SingUpUser/>}/>
+                <Route path="/sigup-user-details" element={<DetailUserPage/>}/>
                 {/* <Route path="/rating-company" element={}/> */}
                 {/* <Route path="/rating-yoitech" element={}/> */}
                 {/* <Route path="/buscar-vagas" element={}/> */}
