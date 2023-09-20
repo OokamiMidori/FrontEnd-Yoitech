@@ -13,7 +13,7 @@ export const Router = () =>{
                 <Route path="/" element={<UserLogin/>}/>
                 <Route path="/company" element={ <CompanyLogin/> }/>
                 <Route path="/singup-user" element={<SingUpUser/>}/>
-                <Route path="/sigup-user-details" element={<DetailUserPage/>}/>
+                <Route path="/singup-user-details" element={<DetailUserPage/>}/>
                 {/* <Route path="/rating-company" element={}/> */}
                 {/* <Route path="/rating-yoitech" element={}/> */}
                 {/* <Route path="/buscar-vagas" element={}/> */}
