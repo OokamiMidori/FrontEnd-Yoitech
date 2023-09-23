@@ -17,3 +17,16 @@ flex-direction: column;
 align-items: flex-start;
 justify-content: space-around;
 `
+
+export const DataInput = styled.div`
+background-color: white;
+display: flex;
+flex-direction: column;
+input{
+    background-color: #DDDDDD;
+    text-align: center;
+}
+div{
+    background-color: white;
+}
+`

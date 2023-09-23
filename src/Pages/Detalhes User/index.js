@@ -1,50 +1,49 @@
+import { useState } from "react"
 import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
-import { DetailUserCard, DetailUserContainer } from "./styledDetailsUser"
-import { Input } from '@chakra-ui/react'
+import { DataInput, DetailUserCard, DetailUserContainer } from "./styledDetailsUser"
+import { SingleDatepicker } from "chakra-dayzed-datepicker"
 
 export const DetailUserPage = () => {
+    const [startDate, setStartDate] = useState(new Date());
+    
 
 
-    return (
-        <DetailUserContainer>
-            <Header />
-            <DetailUserCard>
-                <span>Nome</span>
-                <input />
-                <span>Telefone</span>
-                <input />
+return (
+    <DetailUserContainer>
+        <Header />
+        <DetailUserCard>
+            <span>Nome</span>
+            <input />
+            <span>Telefone</span>
+            <input />
+            <DataInput>
+                <div>Data de Nascimento</div>
+                <SingleDatepicker name="date-input" date={startDate} onDateChange={setStartDate} />
+            </DataInput>
+            <div>
                 <div>
-                    <div>Data de Nascimento</div>
-                    <Input
-                        placeholder="Select Date and Time"
-                        size="md"
-                        type="datetime-local"
-                    />
+                    <span>Sexo</span>
+                    <select >
+
+                    </select>
                 </div>
                 <div>
-                    <div>
-                        <span>Sexo</span>
-                        <select >
+                    <span>Nacionalidade</span>
+                    <select >
 
-                        </select>
-                    </div>
-                    <div>
-                        <span>Nacionalidade</span>
-                        <select >
-
-                        </select>
-                    </div>
-                    <div>
-                        <span>Estado Civil</span>
-                        <select >
-
-                        </select>
-                    </div>
-
+                    </select>
                 </div>
-            </DetailUserCard>
-            <Footer />
-        </DetailUserContainer>
-    )
+                <div>
+                    <span>Estado Civil</span>
+                    <select >
+
+                    </select>
+                </div>
+
+            </div>
+        </DetailUserCard>
+        <Footer />
+    </DetailUserContainer>
+)
 }

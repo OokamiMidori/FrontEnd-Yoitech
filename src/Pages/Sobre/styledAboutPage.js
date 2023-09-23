@@ -6,14 +6,14 @@ flex-direction: column;
 justify-content: space-between;
 align-items: center;
 height: 100vh;
-width: 100vw;
+width: 100%;
 `
 export const ItensCard = styled.div`
 border-radius: 80px;
-border: 1px #FFFFFF solid;
-background-color: #A9AEB3;
+border: 1px #707070 solid;
+background-color: #FFFFFF;
 padding: 3px 0px;
-color: #FFFFFF;
+color: #707070;
 font-family: Arial, Helvetica, sans-serif;
 width: 15vw;
 display: flex;
@@ -43,5 +43,87 @@ div{
 }
 .titulo{
     font-size: x-large;
+}
+`
+export const YoitechContainer = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-around;
+width: 100%;
+height: 150px;
+img{
+    height: 90%;
+    border-radius: 80px;
+}
+`
+export const MissaoPropositoVisaoContainer = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-around;
+.vmp{
+    background-color: white;
+    border: 4px #707070 solid;
+    border-radius: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 25vw;
+    
+    div{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        text-align: center;
+        
+    }
+
+    .titulo{
+        font-size: x-large;
+        color: #484B4D;
+    }
+}
+`
+
+export const LeftCardAbout = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+img{
+    height: 20vh;
+}
+`
+
+export const MidCardAbout = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+img{
+    height: 20vh;
+}
+`
+
+export const RightCardAbout = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+img{
+    height: 20vh;
+}
+`
+export const LogoCardAbout = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+.seta{
+    height: 20vh;
+}
+.logo{
+    width: 30%;
 }
 `

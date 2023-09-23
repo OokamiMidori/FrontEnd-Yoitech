@@ -33,14 +33,24 @@ div{
         text-shadow: black 0px 1px 1px  ;
     }
 }
+
+`
+export const ImgContainer = styled.div`
+display: flex;
+align-items: flex-end;
+justify-content: center;
+width: 15vw;
+height: 100%;
+margin-left: 12%;
 img{
    
-    border-radius: 80px;
-    background-color: #A9AEB3 ;
-    text-align: center;
-    border: 4px white solid;
-    margin-left: 150px;
-    height: 40px;
-    margin: 18px 150px;
+   border-radius: 80px;
+   background-color: #A9AEB3 ;
+   text-align: center;
+   /* border: 4px white solid; */
+   /* margin-left: 150px; */
+   /* height: 100%; */
+   /* margin: 18px 150px; */
+   width: 65%;
 }
 `
