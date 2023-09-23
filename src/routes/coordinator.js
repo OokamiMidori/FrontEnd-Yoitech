@@ -19,5 +19,5 @@ export const goToSingUpUserPage = (navigate) => {
 }
 
 export const goToDetailsUserSingUp = (navigate) =>{
-    navigate("/sigup-user-details")
+    navigate("/singup-user-details")
 }

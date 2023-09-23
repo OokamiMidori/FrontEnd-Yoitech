@@ -15,15 +15,20 @@ export const SingUpUser = () => {
     const [confirmPassword, setConfirmPassword] = useState("")
 
     const goToCadastroPessoal = () => {
-        if (!isChecked) {
-            alert("Favor confirmar que aceita os termos e condições")
-        }
 
-        if (password !== confirmPassword) {
-            alert("Senhas precisam ser iguais!")
-        }
-        if (password === confirmPassword && email !== "" && password !== "") {
-            goToDetailsUserSingUp(navigate)
+
+
+        if ( email !== "" && password !== "" && confirmPassword !== "") {
+            if (password !== confirmPassword) {
+                alert("Senhas precisam ser iguais!")
+            } else {
+                if (!isChecked) {
+                    alert("Favor confirmar que aceita os termos e condições")
+                }
+                else {
+                    goToDetailsUserSingUp(navigate)
+                }
+            }
         } else {
             alert("Verifique se preencheu as informações com itens válidos")
         }

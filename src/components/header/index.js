@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import Emprego from '../../assets/Emprego.jp.svg'
+import Emprego from '../../assets/emprego.jp .svg'
 import { getColors } from '../../utils/returnheaderscolor'
-import { HeadersContainer } from './styledHeader'
+import { HeadersContainer, ImgContainer } from './styledHeader'
 import { goToAboutPage, goToCompanyPage, goToContactPage, goToHomePage } from '../../routes'
 
 
@@ -11,7 +11,10 @@ export const Header = () => {
     const location = useLocation()
     return (
         <HeadersContainer color={getColors(location.pathname)} >
-            <img src={Emprego} />
+            <ImgContainer>
+                <img src={Emprego} /> 
+            </ImgContainer>
+           
             <div>
                 <p onClick={()=> goToAboutPage(navigate)} >Sobre</p>
                 <p onClick={()=> goToHomePage(navigate)}>Candidato</p>
