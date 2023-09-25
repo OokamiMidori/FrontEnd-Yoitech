@@ -127,3 +127,56 @@ align-items: center;
     width: 30%;
 }
 `
+export const ContentMISTContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+background-color: white;
+border: 1px #707070 solid;
+width: 50vw;
+height: 40vh;
+margin: 20px;
+div{
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0px 30px;
+}
+h2{
+    background-color: white;
+    color: #484B4D;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0px 30px;
+}
+img{
+    background-color: white;
+    width: 2vw;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.image{
+    
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0px 30px;
+    cursor: pointer;
+}
+`
+export const SuperDivAcordeonContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+max-height: 1200px;
+`
