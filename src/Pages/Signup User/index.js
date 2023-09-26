@@ -3,8 +3,8 @@ import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
 import { ContainerCard, NextAndBackImg, SingUpUserCard, StyledSingUpUserContainer, TermosContainer } from "./styledSigUpUser"
 import { useState } from "react"
-import setaAvancar from "../../assets/avancar-seta.png"
-import setaRetornar from "../../assets/voltar-seta.png"
+import setaAvancar from "../../assets/next-3.svg"
+import setaRetornar from "../../assets/return-2.svg"
 import { goToDetailsUserSingUp, goToHomePage } from "../../routes"
 
 export const SingUpUser = () => {
