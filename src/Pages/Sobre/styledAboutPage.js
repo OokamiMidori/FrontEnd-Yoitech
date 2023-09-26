@@ -26,20 +26,22 @@ font-size: large;
 export const VisaoContainer = styled.div`
 display: flex;
 justify-content: center;
-align-items: flex-start;
+align-items: center;
 flex-direction: column;
-width: 60vw;
+width: 50vw;
 border: 2px solid #707070;
-border-radius: 47px;
-padding: 40px 10px;
+border-radius: 83px;
+padding: 5px 10px;
 background-color: white;
 font-family: Arial, Helvetica, sans-serif;
-text-align: left;
+text-align: center;
 
 div{
     color: #484b4d;
     background-color: white;   
-    padding :10px ;
+    padding : 5px 15px  ;
+    border-radius: 83px;
+    width: 95%;
 }
 .titulo{
     font-size: x-large;
@@ -51,6 +53,7 @@ align-items: center;
 justify-content: space-around;
 width: 100%;
 height: 150px;
+margin-top: 50px;
 img{
     height: 90%;
     border-radius: 80px;
@@ -71,7 +74,7 @@ justify-content: space-around;
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 25vw;
+    width: 20vw;
     
     div{
         background-color: white;
@@ -80,12 +83,14 @@ justify-content: space-around;
         justify-content: center;
         width: 60%;
         text-align: center;
-        
+        color: #484b4d;
     }
 
     .titulo{
         font-size: x-large;
         color: #484B4D;
+        text-align: center;
+        width: 50%;
     }
 }
 `
@@ -95,7 +100,14 @@ display: flex;
 flex-direction: column;
 align-items: flex-end;
 img{
-    height: 20vh;
+    height: 10vh;
+    width: 5vw;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 `
 
@@ -105,6 +117,7 @@ flex-direction: column;
 align-items: center;
 img{
     height: 20vh;
+    width: 5vw;
 }
 `
 
@@ -114,14 +127,17 @@ flex-direction: column;
 align-items: flex-start;
 img{
     height: 20vh;
+    width: 5vw;
 }
 `
 export const LogoCardAbout = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-bottom: 20px;
 .seta{
     height: 20vh;
+    width: 5vw;
 }
 .logo{
     width: 30%;
@@ -134,8 +150,8 @@ justify-content: space-around;
 align-items: center;
 background-color: white;
 border: 1px #707070 solid;
-width: 50vw;
-height: 40vh;
+width: 30vw;
+/* height: 20vh; */
 margin: 20px;
 div{
     background-color: white;
@@ -144,6 +160,7 @@ div{
     justify-content: flex-start;
     width: 100%;
     padding: 0px 30px;
+    color: #484b4d;
 }
 h2{
     background-color: white;
@@ -153,6 +170,7 @@ h2{
     justify-content: flex-start;
     width: 100%;
     padding: 0px 30px;
+    font-size: x-large;
 }
 img{
     background-color: white;

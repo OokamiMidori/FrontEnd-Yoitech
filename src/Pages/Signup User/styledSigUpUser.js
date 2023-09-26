@@ -18,9 +18,10 @@ align-items: flex-start;
 justify-content: space-around;
 
 img{
-    height: 9vh;
+    height: 5vh;
     width: 15vh;
     cursor: pointer;
+    background-color: white;
 }
 div{
     background-color: white;
@@ -42,6 +43,7 @@ h3{
     color: #707070;
     /* margin-left: 5vw; */
     margin-bottom: 2vh;
+    font-size: x-large;
 }
 
 span{
@@ -67,7 +69,7 @@ background-color: white;
 margin-top: 6vh;
 /* justify-content: flex-start;
 align-items: flex-start; */
-text-align: center;
+text-align: start;
 width:100%;
 .termos{
     color: #FC0C24;

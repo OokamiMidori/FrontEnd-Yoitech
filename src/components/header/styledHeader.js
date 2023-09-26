@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HeadersContainer = styled.div`
 display: flex;
 flex-direction: row;
-width: 100vw;
+width: 100%;
 height: 80px;
 justify-content: space-between;
 align-items: center;
@@ -16,8 +16,8 @@ div{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-   margin-right: 150px;
-    width: 270px;
+    margin-right: 8%;
+    width: 15%;
     background-color: ${(props) => props.color};
    
     p{
@@ -42,12 +42,15 @@ justify-content: center;
 width: 15vw;
 height: 100%;
 margin-left: 12%;
+border-radius: 80px;
+margin-top: 20px;
+margin-bottom: 20px;
 img{
    
-   border-radius: 80px;
+   border-radius: 83px;
    background-color: #A9AEB3 ;
    text-align: center;
-   /* border: 4px white solid; */
+   /* border: 1px black solid; */
    /* margin-left: 150px; */
    /* height: 100%; */
    /* margin: 18px 150px; */
