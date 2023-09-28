@@ -18,6 +18,10 @@ export const goToSingUpUserPage = (navigate) => {
     navigate("/singup-user")
 }
 
-export const goToDetailsUserSingUp = (navigate) =>{
+export const goToDetailsUserSingUp = (navigate) => {
     navigate("/singup-user-details")
+}
+
+export const goToConfirmationPage = (navigate) => {
+    navigate("/user-confirmation-email")
 }
