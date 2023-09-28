@@ -2,9 +2,9 @@ import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
 import { AboutContainer, ContentMISTContainer, ItensCard, LeftCardAbout, LogoCardAbout, MidCardAbout, MissaoPropositoVisaoContainer, RightCardAbout, SuperDivAcordeonContainer, VisaoContainer, YoitechContainer } from "./styledAboutPage"
 import Yoitech from "../../assets/Yoitech .svg"
-import SetaParaBaixo from "../../assets/arrow-down-2-7.svg"
-import SetaDiagonalEsquerda from "../../assets/arrow-bend-left-down-2-5.svg"
-import SetaDiagonalDireita from "../../assets/arrow-bend-right-down-2-8.svg"
+import SetaParaBaixo from "../../assets/arrow-up-1-2.svg"
+import SetaDiagonalEsquerda from "../../assets/arrow-up-1-2.svg"
+import SetaDiagonalDireita from "../../assets/arrow-up-1-2.svg"
 import EmpregoJP from "../../assets/emprego.jp .svg"
 import { useState } from "react"
 import Voltar from "../../assets/return-2.svg"
@@ -19,7 +19,8 @@ export const AboutPage = () => {
     return (
         <AboutContainer>
             <Header />
-            <SuperDivAcordeonContainer>
+            <div className="containerAbout">
+                 <SuperDivAcordeonContainer>
                 <div onClick={() => setQuemSomosOpen(!quemSomosOpen)}>
 
                     {quemSomosOpen ? <ContentMISTContainer>
@@ -116,6 +117,8 @@ export const AboutPage = () => {
 
             </MissaoPropositoVisaoContainer>
 
+            </div>
+           
             <Footer />
         </AboutContainer>
     )

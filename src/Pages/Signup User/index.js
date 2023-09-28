@@ -5,7 +5,7 @@ import { ContainerCard, NextAndBackImg, SingUpUserCard, StyledSingUpUserContaine
 import { useState } from "react"
 import setaAvancar from "../../assets/next-3.svg"
 import setaRetornar from "../../assets/return-2.svg"
-import { goToDetailsUserSingUp, goToHomePage } from "../../routes"
+import { goToConfirmationPage, goToHomePage } from "../../routes"
 
 export const SingUpUser = () => {
     const navigate = useNavigate()
@@ -14,7 +14,7 @@ export const SingUpUser = () => {
     const [email, setEmail] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
 
-    const goToCadastroPessoal = () => {
+    const goToPageConfirmation = () => {
 
 
 
@@ -26,7 +26,7 @@ export const SingUpUser = () => {
                     alert("Favor confirmar que aceita os termos e condições")
                 }
                 else {
-                    goToDetailsUserSingUp(navigate)
+                    goToConfirmationPage(navigate)
                 }
             }
         } else {
@@ -69,7 +69,7 @@ export const SingUpUser = () => {
                     </ContainerCard>
                     <NextAndBackImg>
                         <img src={setaRetornar} onClick={() => goToHomePage(navigate)} />
-                        <img src={setaAvancar} onClick={() => goToCadastroPessoal()} />
+                        <img src={setaAvancar} onClick={() => goToPageConfirmation()} />
                     </NextAndBackImg>
                 </SingUpUserCard>
             </div>

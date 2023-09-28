@@ -7,6 +7,17 @@ justify-content: space-between;
 align-items: center;
 height: 100vh;
 width: 100%;
+position: relative;
+  min-height: 100vh;
+  .containerAbout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 15rem;
+    padding-top: 2.5rem;
+  }
 `
 export const ItensCard = styled.div`
 border-radius: 80px;
@@ -35,13 +46,14 @@ padding: 5px 10px;
 background-color: white;
 font-family: Arial, Helvetica, sans-serif;
 text-align: center;
+margin-top: 1.5rem;
 
 div{
     color: #484b4d;
     background-color: white;   
     padding : 5px 15px  ;
     border-radius: 83px;
-    width: 95%;
+    width: 90%;
 }
 .titulo{
     font-size: x-large;
@@ -55,7 +67,7 @@ width: 100%;
 height: 150px;
 margin-top: 50px;
 img{
-    height: 90%;
+    height: 100%;
     border-radius: 80px;
 }
 `
@@ -65,6 +77,8 @@ flex-direction: row;
 flex-wrap: wrap;
 align-items: center;
 justify-content: space-around;
+height: 50%;
+padding-bottom: 2.5rem;
 .vmp{
     background-color: white;
     border: 4px #707070 solid;
@@ -84,6 +98,7 @@ justify-content: space-around;
         width: 60%;
         text-align: center;
         color: #484b4d;
+        border-radius: 66px;
     }
 
     .titulo{
@@ -99,15 +114,19 @@ export const LeftCardAbout = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-end;
+height: 80%;
 img{
     height: 10vh;
     width: 5vw;
+    transform: rotate(-140deg);
+    border-radius: 66px;
 }
 div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 `
 
@@ -115,9 +134,11 @@ export const MidCardAbout = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+height: 80%;
 img{
-    height: 20vh;
+    height: 30vh;
     width: 5vw;
+    transform: rotate(180deg);
 }
 `
 
@@ -125,19 +146,25 @@ export const RightCardAbout = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
+height: 80%;
 img{
-    height: 20vh;
+    height: 10vh;
     width: 5vw;
+   transform: rotate(140deg);
+   border-radius: 66px;
 }
 `
 export const LogoCardAbout = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-bottom: 20px;
+
+height: 60%;
 .seta{
-    height: 20vh;
+    height: 10vh;
     width: 5vw;
+    transform: rotate(180deg);
+    margin-bottom: 1.5rem;
 }
 .logo{
     width: 30%;

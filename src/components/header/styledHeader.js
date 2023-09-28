@@ -17,7 +17,7 @@ div{
     justify-content: space-between;
     align-items: center;
     margin-right: 8%;
-    width: 15%;
+    width: 280px;
     background-color: ${(props) => props.color};
    
     p{

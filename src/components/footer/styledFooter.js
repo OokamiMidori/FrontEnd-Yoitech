@@ -7,10 +7,14 @@ background-color: #EBE9E9;
 display: flex;
 flex-direction: row;
 height: 60px;
-width: 100vw;
+width: 100%;
 opacity: 1.00;
 justify-content: center;
 align-items: center;
+position: relative;
+bottom: 0;
+
+
 div{
     background-color: #EBE9E9;
     font-family: Arial, Helvetica, sans-serif;

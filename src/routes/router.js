@@ -5,6 +5,7 @@ import {AboutPage} from "../Pages/Sobre/index"
 import {ContatoPage} from "../Pages/Contato/index"
 import { SingUpUser } from "../Pages/Signup User";
 import { DetailUserPage } from "../Pages/Detalhes User";
+import { ConfirmationPageUser } from "../Pages/Confirmação de Cadastro";
 
 export const Router = () =>{
     return (
@@ -12,8 +13,9 @@ export const Router = () =>{
             <Routes>
                 <Route path="/" element={<UserLogin/>}/>
                 <Route path="/company" element={ <CompanyLogin/> }/>
-                <Route path="/singup-user" element={<SingUpUser/>}/>
-                <Route path="/singup-user-details" element={<DetailUserPage/>}/>
+                <Route path="/singup-user-details" element={<SingUpUser/>}/>
+                <Route path="/singup-user" element={<DetailUserPage/>}/>
+                <Route path="/user-confirmation-email" element={<ConfirmationPageUser/>} />
                 {/* <Route path="/rating-company" element={}/> */}
                 {/* <Route path="/rating-yoitech" element={}/> */}
                 {/* <Route path="/buscar-vagas" element={}/> */}

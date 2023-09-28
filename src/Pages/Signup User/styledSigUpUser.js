@@ -56,6 +56,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 width: 35vw;
+background-color: white;
 `
 export const ContainerCard = styled.div`
   background-color: white;
