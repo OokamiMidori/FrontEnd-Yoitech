@@ -1,44 +1,64 @@
+import { useContext } from "react"
 import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
-import { ConfirmationPageStyled, ConfirmationMensageCard,AvisoCard } from "./styledConfirmationEmail"
+import { ConfirmationPageStyled, ConfirmationMensageCard, AvisoCard, BottonCard, AlterarEmailCard, EnviarEmailCard, MensageTopCard } from "./styledConfirmationEmail"
+import { UserContext } from "../../contexts/UserContext"
+import { useNavigate } from "react-router-dom"
+import { goToConfirmedPage, goToContactPage, goToDetailsUserSingUp } from "../../routes"
 
-export const ConfirmationPageUser = () =>{
+export const ConfirmationPageUser = () => {
+    const context = useContext(UserContext)
+    const { email } = context
+    const navigate = useNavigate()
 
-    return(
+    return (
         <ConfirmationPageStyled>
-            <Header/>
+            <Header />
             <ConfirmationMensageCard>
                 <h1>Confirmação de e-mail</h1>
-                <div>
-                    <span>
-                    Esta ação requer um e-mail de verificação. Por favor, verifique a sua caixa de entrada e siga as instruções. O link de confirmação será enviado para:
-                    </span>
-                </div>
+                <MensageTopCard>
+
+                    <div>
+                        <span>
+                            Esta ação requer um e-mail de verificação. Por favor, verifique a sua caixa de entrada e siga as instruções. O link de confirmação será enviado para:
+                        </span>
+                        <div> {email} </div>
+                    </div>
+                </MensageTopCard>
+
                 <AvisoCard>
-                    <span>
-                        Atenção:
-                    </span>
-                    <span>
-                        Em alguns casos o e-mail pode cair na caixa de 
-                    </span>
-                    <h2>LIXO ELETRÔNICO</h2>
-                    <span>
-                        ou
-                    </span>
-                    <h2>SPAM.</h2>
+                    <div>
+                        <span className="aviso">
+                            Atenção:
+                        </span>
+                        <span>
+                            Em alguns casos o e-mail pode cair na caixa de
+                        </span>
+                        <span className="aviso"> LIXO ELETRÔNICO </span>
+                        <span>
+                            ou
+                        </span>
+                        <span className="aviso"> SPAM.</span>
+                    </div>
                 </AvisoCard>
-                <div>
-                    <div>
-                        Alterar endereço de e-mail
-                    </div>
+                <BottonCard>
+                    <AlterarEmailCard onClick={()=>goToDetailsUserSingUp(navigate)}>
+                        <div>
+                            Alterar endereço de e-mail
+                        </div>
 
-                    <div>
-                        Emviar e-mail de confirmação
-                    </div>
+                    </AlterarEmailCard>
 
-                </div>
+                    <EnviarEmailCard onClick={()=> goToConfirmedPage(navigate)} > 
+                        <div>
+                            Enviar e-mail de confirmação
+                        </div>
+
+                    </EnviarEmailCard>
+
+                </BottonCard>
             </ConfirmationMensageCard>
-            <Footer/>
+            <Footer />
         </ConfirmationPageStyled>
     )
 }

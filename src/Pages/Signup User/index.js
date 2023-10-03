@@ -2,17 +2,21 @@ import { useNavigate } from "react-router-dom"
 import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
 import { ContainerCard, NextAndBackImg, SingUpUserCard, StyledSingUpUserContainer, TermosContainer } from "./styledSigUpUser"
-import { useState } from "react"
+import { useContext } from "react"
 import setaAvancar from "../../assets/next-3.svg"
 import setaRetornar from "../../assets/return-2.svg"
 import { goToConfirmationPage, goToHomePage } from "../../routes"
+import { UserContext } from "../../contexts/UserContext"
 
 export const SingUpUser = () => {
     const navigate = useNavigate()
-    const [isChecked, setIsChecked] = useState(false)
-    const [password, setPassword] = useState("")
-    const [email, setEmail] = useState("")
-    const [confirmPassword, setConfirmPassword] = useState("")
+    // const [isChecked, setIsChecked] = useState(false)
+    // const [password, setPassword] = useState("")
+    // const [email, setEmail] = useState("")
+    // const [confirmPassword, setConfirmPassword] = useState("")
+    const context = useContext(UserContext);
+
+    const {isChecked, setIsChecked, email, setEmail, password, setPassword, confirmPassword, setConfirmPassword} = context;
 
     const goToPageConfirmation = () => {
 
