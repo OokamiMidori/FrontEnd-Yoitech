@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
 import { DataInput, DetailUserCard, DetailUserContainer, NomeTelefoneCard, SNE } from "./styledDetailsUser"
@@ -8,15 +8,18 @@ import retorno from "../../assets/return-2.svg"
 import { NextAndBackImg } from "../Signup User/styledSigUpUser"
 import { goToDetailsUserSingUp, goToHomePage } from "../../routes"
 import { useNavigate } from "react-router-dom"
+import { UserContext } from "../../contexts/UserContext"
 
 export const DetailUserPage = () => {
-    const [startDate, setStartDate] = useState(new Date());
-    const [genero, setGenero] = useState("")
-    const [name, setName] = useState("")
-    const [phone, setPhone] = useState("")
-    const [nacionalidade, setNacionalidade] = useState("")
-    const [estadoCivil, setEstadoCivil] = useState("")
+    // const [startDate, setStartDate] = useState(new Date());
+    // const [genero, setGenero] = useState("")
+    // const [name, setName] = useState("")
+    // const [phone, setPhone] = useState("")
+    // const [nacionalidade, setNacionalidade] = useState("")
+    // const [estadoCivil, setEstadoCivil] = useState("")
     const navigate = useNavigate()
+    const context = useContext(UserContext)
+    const { startDate, setStartDate, genero, setGenero, name, setName, nacionalidade, setNacionalidade, phone, setPhone, estadoCivil, setEstadoCivil } = context
 
     const optionsGender = [
         { value: "", name: "H/M/NDA" },

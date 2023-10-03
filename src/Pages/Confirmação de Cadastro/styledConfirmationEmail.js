@@ -15,7 +15,7 @@ width: 35vw;
 background-color: white;
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+align-items: center;
 justify-content: space-around;
 div{
     background-color: white;
@@ -42,7 +42,67 @@ h1{
 
 export const AvisoCard = styled.div`
 text-align: start;
-
+display: flex;
+align-items: center;
+justify-content: center;
 width:80%;
-background-color: rgba (245,237,7,0.25)  ;
+background-color: #FCFAC1 ;
+div{
+    background-color: #FCFAC1;
+    text-align: center;
+    padding: 0 20px;
+}
+span{
+    background-color: #FCFAC1;
+}
+.aviso{
+    font-size: large;
+}
+`
+export const BottonCard = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-evenly;
+width: 100%;
+`
+
+export const AlterarEmailCard = styled.div`
+width: 13vw;
+background-color: #707070 ;
+border: 1px #707070 solid;
+border-radius: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+div{
+    background-color: #EBE9E9;
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+`
+
+export const EnviarEmailCard = styled.div`
+width: 13vw;
+background-color: #6AAEFF;
+color: white;
+border: 1px #707070 solid;
+border-radius: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+div{
+    background-color: #6AAEFF;
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+`
+export const MensageTopCard = styled.div`
+text-align: center;
 `
