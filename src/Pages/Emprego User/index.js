@@ -38,7 +38,7 @@ export const StatusJobUserPage = ()=>{
                 <div>Apartir de quando você pode começar no novo emprego?</div>
                 <select>
                     <option value={"Imediato"}>Imediato</option>
-                    <option value={"Preciso cumprir o aviso prévio de()dias"}>Preciso cumprir o aviso prévio de (   ) dias.</option>
+                    <option value={"Preciso cumprir o aviso prévio de()dias"}>Preciso cumprir o aviso prévio de alguns dias.</option>
                 </select>
             </JobUserSelectCard>
             <JobUserSelectCard>
