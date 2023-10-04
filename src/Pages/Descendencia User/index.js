@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { JapaneseStatusCard, JapaneseStatusPageStyled, SelectJapaneseStatusCard } from "./styledJapaneseStatusUser"
 import next from "../../assets/next-3.svg"
 import back from "../../assets/return-2.svg"
@@ -41,12 +41,14 @@ export const JapaneseStatusNivelPage = () => {
         { name: "Refugiado" }
     ]
 
-    if (escolaFilhos !== "") {
-        if (escolaFilhos !== "Não") {
-            setTemFilhos(true)
+    useEffect(() => {
+        if (escolaFilhos !== "") {
+            if (escolaFilhos !== "Não") {
+                setTemFilhos(true)
+            }
         }
-    }
-
+    }, [escolaFilhos]);
+    
 
     return (
         <JapaneseStatusPageStyled>
@@ -79,7 +81,6 @@ export const JapaneseStatusNivelPage = () => {
                     </SelectJapaneseStatusCard>
                     <SelectJapaneseStatusCard>
                         <div>Tem filho(s) em idade escolar?</div>
-
                         <select onChange={(e) => setEscolaFilhos(e.target.value)}>
                             <option value={"Não"}>Não</option>
                             <option value={"Creche"}>Creche</option>
@@ -87,8 +88,6 @@ export const JapaneseStatusNivelPage = () => {
                             <option value={"Ensino Medio"}>Ensino Medio</option>
                             <option value={"Superior"}>Superior</option>
                         </select>
-
-
                     </SelectJapaneseStatusCard>
                 </div>
                 <NextAndBackImg>

@@ -79,7 +79,7 @@ export const UserAdressPage = () => {
                 <h2>Cadastro</h2>
                 <CepCard>
                     <div>〒 (CEP no Japão)</div>
-                    <input onChange={(e) => setCep(e.targer.value)} placeholder="XXX-XXX" />
+                    <input onChange={(e) => setCep(e.target.value)} placeholder="XXX-XXX" />
                 </CepCard>
                 <ProvinciaCidadeCard>
                     <div>
