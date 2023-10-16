@@ -14,6 +14,8 @@ import { JapaneseStatusNivelPage } from "../Pages/Descendencia User";
 import { StatusJobUserPage } from "../Pages/Emprego User";
 import { ChangeUserPage } from "../Pages/Mudança User";
 import { MeasurementsUserPage } from "../Pages/Medidas User";
+import { CurriculoUserPage } from "../Pages/Curriculo User";
+import { UserUploadImg } from "../Pages/Upload Imagem User";
 
 export const Router = () => {
     return (
@@ -32,8 +34,8 @@ export const Router = () => {
                 <Route path="/user-habilitacao" element={<UserHabilitacaoPage />} />
                 <Route path="/user-change" element={<ChangeUserPage />} />
                 <Route path="/user-measurement" element={<MeasurementsUserPage />} />
-                {/* <Route path="/details-user" element={}/> */}
-                {/* <Route path="/details-company" element={}/> */}
+                <Route path="/user-job-history" element={<CurriculoUserPage/>}/>
+                <Route path="/user-img-upload" element={<UserUploadImg/>}/>
                 {/* <Route path="/job-history-user" element={}/> */}
                 <Route path="/user-adress" element={<UserAdressPage />} />
                 {/* <Route path="/adress-company" element={}/> */}

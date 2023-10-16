@@ -54,6 +54,14 @@ export const goToChageUser = (navigate) => {
     navigate("/user-change")
 }
 
-export const goToMeasurementUserPage = (navigate) =>{
+export const goToMeasurementUserPage = (navigate) => {
     navigate("/user-measurement")
+}
+
+export const goToUserHistoryPage = (navigate) => {
+    navigate("/user-job-history")
+}
+
+export const goToUserUploadImg = (navigate)=>{
+    navigate("/user-img-upload")
 }

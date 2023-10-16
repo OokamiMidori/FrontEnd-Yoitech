@@ -53,10 +53,11 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+margin-top: 20%;
 img{
     width: 3vw;
     margin-left: 90%;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     cursor: pointer;
 }
 `
