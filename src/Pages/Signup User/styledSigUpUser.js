@@ -55,8 +55,11 @@ export const NextAndBackImg = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-width: 35vw;
+width: 100%;
 background-color: white;
+img{
+    background-color: white;
+}
 `
 export const ContainerCard = styled.div`
   background-color: white;
