@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import 'cropperjs/dist/cropper.css'
 
 const GlobalStyle = createGlobalStyle`
 *{

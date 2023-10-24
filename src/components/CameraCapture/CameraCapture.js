@@ -1,10 +1,12 @@
-// Em CameraCapture.js
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import Modal from 'react-modal';
+import { CameraButton } from './CameraCaptureStyled';
 
 function CameraCapture({ onPhotoCapture }) {
   const videoRef = useRef(null);
-  const mediaStream = useRef(null);
   const [isCameraOpen, setIsCameraOpen] = useState(false);
+  const [mediaStream, setMediaStream] = useState(null);
+  const [modalSize, setModalSize] = useState({ width: 'auto', height: 'auto' });
 
   const handleToggleCamera = () => {
     if (isCameraOpen) {
@@ -14,28 +16,19 @@ function CameraCapture({ onPhotoCapture }) {
     }
   };
 
-  const handleOpenCamera = async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      mediaStream.current = stream;
-      videoRef.current.srcObject = stream;
-      setIsCameraOpen(true);
-    } catch (error) {
-      console.error('Erro ao abrir a câmera:', error);
-    }
+  const handleOpenCamera = () => {
+    setIsCameraOpen(true);
   };
 
   const handleCloseCamera = () => {
-    if (mediaStream.current) {
-      const tracks = mediaStream.current.getTracks();
-      tracks.forEach((track) => track.stop());
-      videoRef.current.srcObject = null;
-      setIsCameraOpen(false);
+    setIsCameraOpen(false);
+    if (mediaStream) {
+      mediaStream.getTracks().forEach((track) => track.stop());
     }
   };
 
   const handleTakePhoto = () => {
-    if (mediaStream.current) {
+    if (mediaStream) {
       const canvas = document.createElement('canvas');
       canvas.width = videoRef.current.videoWidth;
       canvas.height = videoRef.current.videoHeight;
@@ -58,17 +51,61 @@ function CameraCapture({ onPhotoCapture }) {
     }
   };
 
+  useEffect(() => {
+    if (isCameraOpen) {
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then((stream) => {
+          videoRef.current.srcObject = stream;
+          setMediaStream(stream);
+        })
+        .catch((error) => {
+          console.error('Erro ao abrir a câmera:', error);
+        });
+    }
+  }, [isCameraOpen]);
+
+  useEffect(() => {
+    if (mediaStream && isCameraOpen) {
+      const videoTrack = mediaStream.getVideoTracks()[0];
+      if (videoTrack) {
+        const { width, height } = videoTrack.getSettings();
+        setModalSize({ width: `${width}px`, height: `${height}px` });
+      }
+    }
+  }, [isCameraOpen, mediaStream]);
+
   return (
     <div>
-      <button onClick={handleToggleCamera}>
+      <CameraButton onClick={handleToggleCamera}>
         {isCameraOpen ? 'Fechar Câmera' : 'Abrir Câmera'}
-      </button>
-      {isCameraOpen && (
-        <>
-          <button onClick={handleTakePhoto}>Tirar Foto</button>
-        </>
-      )}
-      <video ref={videoRef} autoPlay muted />
+      </CameraButton>
+
+      <Modal
+        isOpen={isCameraOpen}
+        onRequestClose={handleCloseCamera}
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.5)'
+          },
+          content: {
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: modalSize.width,
+            height: modalSize.height,
+            padding: 0,
+          }
+        }}
+      >
+        {isCameraOpen && (
+          <div>
+            <video ref={videoRef} autoPlay playsInline muted />
+            <button onClick={handleTakePhoto}>Tirar Foto</button>
+          </div>
+        )}
+      </Modal>
     </div>
   );
 }
