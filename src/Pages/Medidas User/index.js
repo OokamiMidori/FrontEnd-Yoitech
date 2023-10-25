@@ -5,7 +5,7 @@ import { InputMeasurementCard, MeasurementUserPageCard, MeasurementUserPageStyle
 import next from "../../assets/next-3.svg"
 import back from "../../assets/return-2.svg"
 import { NextAndBackImg } from "../Signup User/styledSigUpUser"
-import { goToChageUser } from "../../routes"
+import { goToChageUser, goToUserHistoryPage } from "../../routes"
 import { useNavigate } from "react-router-dom"
 
 export const MeasurementsUserPage = () => {
@@ -137,7 +137,7 @@ export const MeasurementsUserPage = () => {
                 </SelectsCard>
                 <NextAndBackImg>
                     <img src={back} onClick={() => goToChageUser(navigate)} />
-                    <img src={next} />
+                    <img src={next} onClick={()=>goToUserHistoryPage(navigate)}/>
                 </NextAndBackImg>
             </MeasurementUserPageCard>
             <Footer />
