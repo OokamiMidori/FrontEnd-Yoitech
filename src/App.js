@@ -14,6 +14,7 @@ function App() {
   const [phone, setPhone] = useState("")
   const [nacionalidade, setNacionalidade] = useState("")
   const [estadoCivil, setEstadoCivil] = useState("")
+  const mudeialgo = "mudei algo"
 
 
 const context = {
