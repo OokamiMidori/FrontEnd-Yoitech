@@ -7,7 +7,9 @@ export const getColors = (path) => {
         case "/about":
             return "#484B4D";
         case "/contact":
-            return "#FAAD3A"
+            return "#FAAD3A";
+        case "/company-singup":
+            return "#33B469"    
          default:
             return "#1073C0"   
     }

@@ -16,6 +16,7 @@ import { ChangeUserPage } from "../Pages/Mudança User";
 import { MeasurementsUserPage } from "../Pages/Medidas User";
 import { CurriculoUserPage } from "../Pages/Curriculo User";
 import { UserUploadImg } from "../Pages/Upload Imagem User";
+import { SingUpCompanyPage } from "../Pages/Signup Empresa";
 
 export const Router = () => {
     return (
@@ -36,7 +37,7 @@ export const Router = () => {
                 <Route path="/user-measurement" element={<MeasurementsUserPage />} />
                 <Route path="/user-job-history" element={<CurriculoUserPage/>}/>
                 <Route path="/user-img-upload" element={<UserUploadImg/>}/>
-                {/* <Route path="/job-history-user" element={}/> */}
+                <Route path="/company-singup" element={<SingUpCompanyPage/>}/>
                 <Route path="/user-adress" element={<UserAdressPage />} />
                 {/* <Route path="/adress-company" element={}/> */}
                 {/* <Route path="/company-history" element={}/> */}

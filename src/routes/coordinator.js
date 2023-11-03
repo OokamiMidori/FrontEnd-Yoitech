@@ -62,6 +62,10 @@ export const goToUserHistoryPage = (navigate) => {
     navigate("/user-job-history")
 }
 
-export const goToUserUploadImg = (navigate)=>{
+export const goToUserUploadImg = (navigate) => {
     navigate("/user-img-upload")
+}
+
+export const goToSingUpCompany = (navigate) => {
+    navigate("/company-singup")
 }
