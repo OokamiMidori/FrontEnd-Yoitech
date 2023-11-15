@@ -214,6 +214,7 @@ export const DetailUserPage = () => {
                     <div>
                         <span>Nacionalidade</span>
                         <select
+                            className="nacionalidade"
                             label="Brasileira"
                             name="Nacionalidade"
                             value={nacionalidade}

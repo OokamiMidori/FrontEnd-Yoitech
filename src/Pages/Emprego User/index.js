@@ -22,7 +22,7 @@ export const StatusJobUserPage = ()=>{
             <div className="titulo">Cadastro</div>
             <JobUserSelectCard>
                 <div>Esta Trabalhando?</div>
-                <select onChange={(e)=>setEmpregado(e.target.value)}>
+                <select onChange={(e)=>setEmpregado(e.target.value)} className="trabalho">
                 <option value={"Sim"}>Sim</option>
                 <option value={"Não"}>Não</option>
                 <option value={"Cumprindo aviso"}>Cumprindo aviso</option>
@@ -36,14 +36,14 @@ export const StatusJobUserPage = ()=>{
             </JobUserSelectCard>
             <JobUserSelectCard>
                 <div>Apartir de quando você pode começar no novo emprego?</div>
-                <select>
+                <select className="inicio">
                     <option value={"Imediato"}>Imediato</option>
                     <option value={"Preciso cumprir o aviso prévio de()dias"}>Preciso cumprir o aviso prévio de alguns dias.</option>
                 </select>
             </JobUserSelectCard>
             <JobUserSelectCard>
                 <div>Pode fazer horas extras?</div>
-                <select onChange={(e)=>setHoraExtra(e.target.value)}>
+                <select onChange={(e)=>setHoraExtra(e.target.value)} className="extra">
                     <option value={"Não"}>Não</option>
                     <option value={"Sim"}>Sim</option>
                 </select>

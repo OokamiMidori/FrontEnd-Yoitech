@@ -11,8 +11,8 @@ justify-content: space-between;
 `
 
 export const DetailUserCard = styled.div`
-height: 60vh;
-width: 35vw;
+height: 596px;
+width: 700px;
 background-color: white;
 display: flex;
 flex-direction: column;
@@ -25,9 +25,9 @@ img{
     background-color: white;
 }
 h2{
-    padding-left: 20px;
+    padding-left: 88px;
     background-color: white;
-    font-size: large;
+    font-size: x-large;
     color: #707070;
 }
 `
@@ -39,14 +39,14 @@ justify-content: space-between;
 width: 100%;
 height: 33%;
 background-color: white;
-padding-left: 20px;
+padding-left: 88px;
 span{
     background-color: white;
 }
 input{
     background-color: #DDDDDD;
-    width: 95%;
-    height: 28%;
+    width: 400px;
+    height: 50px;
     padding-left: 5px;
 }
 
@@ -56,7 +56,7 @@ export const DataInput = styled.div`
 background-color: white;
 display: flex;
 flex-direction: column;
-padding-left: 20px;
+padding-left: 88px;
 input{
     background-color: #DDDDDD;
     text-align: center;
@@ -70,10 +70,11 @@ display: flex;
 flex-direction: row;
 width: 100%;
 align-items: center;
-justify-content: center;
+justify-content: space-evenly;
 background-color: white;
 select{
-    max-width: 90%;
+    width: 100px;
+    height: 50px;
     background-color: #DDDDDD;
     margin: 0px 0px;
     cursor: pointer;
@@ -89,5 +90,8 @@ div{
 span{
     background-color: white;
     width: 90%;
+}
+.nacionalidade{
+    width: 200px;
 }
 `

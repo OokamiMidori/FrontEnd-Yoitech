@@ -69,3 +69,23 @@ export const goToUserUploadImg = (navigate) => {
 export const goToSingUpCompany = (navigate) => {
     navigate("/company-singup")
 }
+
+export const goToSingupCompanyDetails = (navigate) => {
+    navigate("/company-singup-details")
+}
+
+export const goToEmailConfirmationCompany = (navigate) => {
+    navigate("/company-email-confirmation")
+}
+
+export const goToEmailConfirmedCompany = (navigate) => {
+    navigate("/company-email-confirm")
+}
+
+export const goToCompanyAdressPage = (navigate) => {
+    navigate("/company-adress")
+}
+
+export const goToUploadImgCompany = (navigate) => {
+    navigate("/company-img-upload")
+}

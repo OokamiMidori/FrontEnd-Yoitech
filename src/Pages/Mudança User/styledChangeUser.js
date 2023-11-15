@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const ChangeUserStyledPage = styled.div`
 display: flex;
 flex-direction: column;
-height: 100vh;
-width: 100%;
+height: 1000px;
 align-items: center;
 justify-content: space-between;
 `
@@ -23,11 +22,11 @@ div{
 img{
     background-color: white;
     cursor: pointer;
-    width: 8%;
+    width: 59px;
     margin: 0px 10px;
 }
 .titulo{
-    font-size: large;
+    font-size: x-large;
     margin-left: 2vw;
 }
 `
@@ -41,6 +40,7 @@ width: 90%;
 margin-left: 10%;
 height: 30vh;
 select{
-    width: 20vw;
+    width: 322px;
+    height: 50px;
 }
 `

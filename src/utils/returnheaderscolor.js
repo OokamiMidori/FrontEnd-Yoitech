@@ -9,9 +9,19 @@ export const getColors = (path) => {
         case "/contact":
             return "#FAAD3A";
         case "/company-singup":
-            return "#33B469"    
-         default:
-            return "#1073C0"   
+            return "#33B469";
+        case "/company-singup-details":
+            return "#33B469";
+        case "/company-email-confirmation":
+            return "#33B469";
+        case "/company-email-confirm":
+            return "#33B469";
+        case "/company-adress":
+            return "#33B469";
+        case "/company-img-upload":
+            return "#33B469";
+        default:
+            return "#1073C0"
     }
 
 }

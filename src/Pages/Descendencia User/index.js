@@ -18,7 +18,6 @@ export const JapaneseStatusNivelPage = () => {
     const [temFilhos, setTemFilhos] = useState(false)
 
     const grauDeDescendenciaArray = [
-        { name: "Descendente de Japoneses" },
         { name: "Japones (Isei)" },
         { name: "2 geracao (Nisei)" },
         { name: "3 geracao (Sansei)" },
@@ -48,17 +47,17 @@ export const JapaneseStatusNivelPage = () => {
             }
         }
     }, [escolaFilhos]);
-    
+
 
     return (
         <JapaneseStatusPageStyled>
             <Header />
             <JapaneseStatusCard>
                 <div className="titulo">Cadastro</div>
-                <div>
+                <div className="select">
                     <SelectJapaneseStatusCard>
                         <div>Grau de descendencia Japonesa?</div>
-                        <select onChange={(e) => setDescendencia(e.target.value)}>
+                        <select onChange={(e) => setDescendencia(e.target.value)} className="japones">
                             {grauDeDescendenciaArray.map((a) => {
                                 return <option value={a.name}>{a.name}</option>
                             })}
@@ -66,22 +65,22 @@ export const JapaneseStatusNivelPage = () => {
                     </SelectJapaneseStatusCard>
                     <SelectJapaneseStatusCard>
                         <div>Qual o seu tipo de Visto?</div>
-                        <select onChange={(e) => setVisa(e.target.value)}>
+                        <select onChange={(e) => setVisa(e.target.value)} className="japones">
                             {vistoArray.map((a) => {
                                 return <option value={a.name}>{a.name}</option>
                             })}
                         </select>
                     </SelectJapaneseStatusCard>
-                    <SelectJapaneseStatusCard>
+                    <SelectJapaneseStatusCard >
                         <div>Tem filho(s) no Japão?</div>
-                        <select onChange={(e) => setFilhos(e.target.value)}>
+                        <select onChange={(e) => setFilhos(e.target.value)} className="filhos">
                             <option value={"Não"}>Não</option>
                             <option value={"Sim"}>Sim</option>
                         </select>
                     </SelectJapaneseStatusCard>
-                    <SelectJapaneseStatusCard>
+                    <SelectJapaneseStatusCard >
                         <div>Tem filho(s) em idade escolar?</div>
-                        <select onChange={(e) => setEscolaFilhos(e.target.value)}>
+                        <select onChange={(e) => setEscolaFilhos(e.target.value)} className="filhos">
                             <option value={"Não"}>Não</option>
                             <option value={"Creche"}>Creche</option>
                             <option value={"Fundamental"}>Fundamental</option>

@@ -17,6 +17,12 @@ import { MeasurementsUserPage } from "../Pages/Medidas User";
 import { CurriculoUserPage } from "../Pages/Curriculo User";
 import { UserUploadImg } from "../Pages/Upload Imagem User";
 import { SingUpCompanyPage } from "../Pages/Signup Empresa";
+import { SingupCompanyDetails } from "../Pages/Signup Empresa 2";
+import { ConfirmacaoDeEmailCompany } from "../Pages/Confirmação de Email Empresa";
+import { EmailConfirmedCompanyPage } from "../Pages/Email Confirmado Company";
+import { CompanyAdressPage } from "../Pages/Endereço Empresa";
+import { ImgCompanyPage } from "../Pages/Upload Imagem Empresa";
+
 
 export const Router = () => {
     return (
@@ -39,11 +45,11 @@ export const Router = () => {
                 <Route path="/user-img-upload" element={<UserUploadImg/>}/>
                 <Route path="/company-singup" element={<SingUpCompanyPage/>}/>
                 <Route path="/user-adress" element={<UserAdressPage />} />
-                {/* <Route path="/adress-company" element={}/> */}
-                {/* <Route path="/company-history" element={}/> */}
-                {/* <Route path="/license-user" element={}/> */}
-                {/* <Route path="/work-status-user" element={}/> */}
-                {/* <Route path="/measurement-user" element={}/> */}
+                <Route path="/company-singup-details" element={<SingupCompanyDetails/>}/>
+                <Route path="/company-email-confirmation" element={<ConfirmacaoDeEmailCompany/>}/>
+                <Route path="/company-email-confirm" element={<EmailConfirmedCompanyPage/>}/>
+                <Route path="/company-adress" element={<CompanyAdressPage/>}/>
+                <Route path="/company-img-upload" element={<ImgCompanyPage/>}/>
                 {/* <Route path="/message-user" element={}/> */}
                 {/* <Route path="/message-company" element={}/> */}
                 {/* <Route path="/change-user" element={}/> */}
