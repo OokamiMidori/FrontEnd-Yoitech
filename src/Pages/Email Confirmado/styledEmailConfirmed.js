@@ -4,42 +4,43 @@ export const EmailConfirmedPage = styled.div`
 display: flex;
 flex-direction: column;
 height: 100vh;
-width: 100%;
+
 align-items: center;
 justify-content: space-between;
 `
 
 export const EmailConfirmedCard = styled.div`
-height: 60vh;
-width: 35vw;
+height: 596px;
+width: 700px;
 background-color: white;
 display: flex;
 flex-direction: column;
 align-items: center;
+margin: 155px 0px;
 /* justify-content: center; */
 h1{
     background-color: #707070;
-    width: 100%;
+    width: 700px;
     color: #A9AEB3;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 15%;
-    font-size: x-large;
+    height: 88px;
+    font-size: xx-large;
     padding-left: 20px;
     margin-top: 8vh;
     margin-bottom: 8vh;
 }
-div{
+.div{
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 0px 15px;
+    padding: 0px 50px;
     text-align: center;
     color: #707070;
-    font-size: large;
+    font-size: x-large;
 }
 img{
     background-color: white;
@@ -55,7 +56,8 @@ justify-content: center;
 align-items: center;
 margin-top: 20%;
 img{
-    width: 3vw;
+    width: 59px;
+    height: 59px;
     margin-left: 90%;
     /* margin-top: 5vh; */
     cursor: pointer;

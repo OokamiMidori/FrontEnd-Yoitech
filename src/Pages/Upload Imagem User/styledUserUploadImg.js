@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const StyledUserUploadImgPage = styled.div`
 display: flex;
 flex-direction: column;
-height: 100vh;
-width: 100%;
+height: 1000px;
+
 align-items: center;
 justify-content: space-between;
 /* video{

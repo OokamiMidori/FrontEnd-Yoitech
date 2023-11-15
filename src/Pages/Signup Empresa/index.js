@@ -3,8 +3,11 @@ import { Header } from "../../components/header"
 import { SingUpCompanyContainer, SingUpCompanyPageContainer } from "./SingUpCompanyStyled"
 import next from "../../assets/next-3.svg"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { goToSingupCompanyDetails } from "../../routes"
 
 export const SingUpCompanyPage = () => {
+    const navigate = useNavigate()
     const [companyName, setCompanyName] = useState("")
     const [userName, setUserName] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
@@ -41,7 +44,7 @@ export const SingUpCompanyPage = () => {
                         <input placeholder="xxx-xxxx-xxxx" typeof="text" onChange={(e)=>setCNPJ(e.target.value)}/>
                     </div>
                     <div className="img">
-                        <img src={next} alt="next-img.png"/>
+                        <img src={next} alt="next-img.png" onClick={()=>goToSingupCompanyDetails(navigate)}/>
                     </div>
                 </SingUpCompanyContainer>
             </div>

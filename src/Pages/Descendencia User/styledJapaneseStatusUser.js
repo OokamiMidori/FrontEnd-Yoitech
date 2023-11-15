@@ -10,8 +10,8 @@ justify-content: space-between;
 `
 
 export const JapaneseStatusCard = styled.div`
-height: 60vh;
-width: 35vw;
+height: 603px;
+width: 700px;
 background-color: white;
 display: flex;
 flex-direction: column;
@@ -21,7 +21,7 @@ div{
     background-color: white;
 }
 .titulo{
-    font-size: large;
+    font-size: x-large;
     margin-left: 2vw;
 }
 img{
@@ -29,6 +29,9 @@ img{
     cursor: pointer;
     width: 8%;
     margin: 0px 10px;
+}
+.select{
+    height: 364px;
 }
 `
 export const SelectJapaneseStatusCard = styled.div`
@@ -40,5 +43,12 @@ height: 29%;
 padding-left: 3vw;
 select{
     cursor: pointer;
+    height: 50px;
+}
+.filhos{
+   min-width: 341px;
+}
+.japones{
+    width: 243px;
 }
 `

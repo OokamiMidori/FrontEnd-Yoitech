@@ -14,7 +14,7 @@ export const EmailConfirmadoPage = () => {
             <Header />
             <EmailConfirmedCard>
                 <h1>Seja bem vindo novamente!</h1>
-                <div>
+                <div className="div">
                     Para garantirmos a sua segurança, proteção de sua conta e recuperação da sua senha em caso de problema, agradecemos a sua confirmação. Para dar continuidade no seu cadastro clique na seta abaixo.
 
                 </div>

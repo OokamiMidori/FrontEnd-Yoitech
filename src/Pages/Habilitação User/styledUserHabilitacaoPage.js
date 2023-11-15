@@ -3,15 +3,15 @@ import styled from "styled-components";
 export const UserHabilitacaoPageStyled = styled.div`
 display: flex;
 flex-direction: column;
-height: 100vh;
-width: 100%;
+height: 1000px;
+
 align-items: center;
 justify-content: space-between;
 `
 
 export const UserHabilitacaoCard = styled.div`
-height: 60vh;
-width: 35vw;
+height: 596px;
+width: 700px;
 background-color: white;
 display: flex;
 flex-direction: column;
@@ -22,7 +22,7 @@ div{
 }
 h1{
     background-color: white;
-    font-size: larger;
+    font-size: x-large;
     margin-left: 10%;
     color: #707070;
 }

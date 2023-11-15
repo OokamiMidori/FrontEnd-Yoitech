@@ -3,20 +3,19 @@ import styled from "styled-components";
 export const MeasurementUserPageStyled = styled.div`
 display: flex;
 flex-direction: column;
-height: 100vh;
-width: 100%;
+height: 1000px;
 align-items: center;
 justify-content: space-between;
 `
 
 export const MeasurementUserPageCard = styled.div`
-height: 60vh;
-width: 35vw;
+height: 603px;
+width: 700px;
 background-color: white;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-justify-content: space-around;
+justify-content: space-between;
 div{
     background-color: white;
 }
@@ -28,7 +27,8 @@ img{
 }
 .titulo{
     font-size: x-large;
-    margin-left: 2vw;
+    margin-left: 116px;
+    margin-top: 78px;
 }
 `
 export const SelectsCard = styled.div`
@@ -38,7 +38,7 @@ align-items: start;
 justify-content: space-between;
 .subTitulo{
     font-size: large;
-    margin-left: 2vw;
+    margin-left: 119px;
 }
 .container{
     display: flex;
@@ -48,13 +48,12 @@ justify-content: space-between;
     justify-content: space-between;
     width: 85%;
     margin: 0px 2vw;
-    margin-left: 4vw;
+    margin-left: 119px;
    
   
    select{
-    width: 40%;
-    min-width: 40%;
-    max-width: 40%;
+    width: 100px;
+    height: 50px;
    }
    .containerPequeno{
     width: 100%;
@@ -70,12 +69,13 @@ display: flex;
 flex-direction: row;
 align-items: start;
 justify-content: space-between;
-margin: 0px 2vw;
-width: 85%;
-margin-left: 4vw;
-height: 15%;
+width: 700px;
+padding-left: 117px;
+/* height: 15%; */
+padding-right: 251px;
 input{
-        width: 40%;
+        width: 100px;
         padding-left: 5px;
+        height: 50px;
     }
 `

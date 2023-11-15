@@ -116,7 +116,7 @@ export const UserAdressPage = () => {
 
 
                 <NextAndBackImg>
-                    <img src={returne} onClick={() => goToConfirmedPage(navigate)} />
+                   
                     <img src={next} onClick={()=> goToUserHabilitacaoPage(navigate)}/>
                 </NextAndBackImg>
 

@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom"
 import { Footer } from "../../components/footer"
 import { Header } from "../../components/header"
-import { ContainerCard, NextAndBackImg, SingUpUserCard, StyledSingUpUserContainer, TermosContainer } from "./styledSigUpUser"
+import { ContainerCard, NextAndBackImg,  StyledSingUpUserContainer, TermosContainer } from "./styledSigUpUser"
 import { useContext } from "react"
 import setaAvancar from "../../assets/next-3.svg"
 import setaRetornar from "../../assets/return-2.svg"
 import { goToConfirmationPage, goToHomePage } from "../../routes"
 import { UserContext } from "../../contexts/UserContext"
+import { SingupDetailsContainer } from "../Signup Empresa 2/SingupCompanyDetailsStyled"
 
 export const SingUpUser = () => {
     const navigate = useNavigate()
@@ -50,7 +51,7 @@ export const SingUpUser = () => {
         <StyledSingUpUserContainer>
             <Header />
             <div>
-                <SingUpUserCard>
+                <SingupDetailsContainer>
                     <ContainerCard>
                         <h3>Cadastro</h3>
                         <div>
@@ -75,7 +76,7 @@ export const SingUpUser = () => {
                         <img src={setaRetornar} onClick={() => goToHomePage(navigate)} />
                         <img src={setaAvancar} onClick={() => goToPageConfirmation()} />
                     </NextAndBackImg>
-                </SingUpUserCard>
+                </SingupDetailsContainer>
             </div>
             <Footer />
         </StyledSingUpUserContainer>
