@@ -9,6 +9,7 @@ import { goToAboutPage, goToCompanyPage, goToContactPage, goToHomePage } from '.
 export const Header = () => {
     const navigate = useNavigate()
     const location = useLocation()
+
     return (
         <HeadersContainer color={getColors(location.pathname)} >
             <ImgContainer>

@@ -30,6 +30,34 @@ export const ImgFrame = styled.div`
 
 `
 
+export const ImgUpadaContainer = styled.div`
+  width: 201px;
+  height: 213px;
+  border-color: #484B4D;
+  border-width: 14px;
+  border-style: solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+  background-image: ${(props) =>
+    props.backgroundImage
+      ? `url(${props.backgroundImage
+        })`
+      : 'none'};;
+  background-size: cover;
+  background-position: center;
+
+  img{
+    background: none;
+  width: 80px;
+  height:80px;
+  }
+`
+
 export const UserUploadCompanyContainer = styled.div`
 height: 820px;
 width: 703px;

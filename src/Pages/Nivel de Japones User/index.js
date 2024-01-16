@@ -3,14 +3,17 @@ import { Header } from "../../components/header"
 import { JapaneseLevelUserCard, JapaneseLevelUserPageStyled, LevelCard, NextAndBackImgLinguage } from "./styledJapaneseLevelUser"
 import next from "../../assets/next-3.svg"
 import voltar from "../../assets/return-2.svg"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { goToUserHabilitacaoPage, goToUserStatusJapanese } from "../../routes"
 import { useNavigate } from "react-router-dom"
+import { UserContext } from "../../contexts/UserContext"
 
 export const UserJapaneseLevelPage = () => {
-    const [conversacao, setConversacao] = useState("")
-    const [leitura, setLeitura] = useState("")
+    // const [conversacao, setConversacao] = useState("")
+    // const [leitura, setLeitura] = useState("")
     const navigate = useNavigate()
+    const context = useContext(UserContext)
+    const {conversacao, setConversacao, leitura, setLeitura} = context
 
     return (
         <JapaneseLevelUserPageStyled>

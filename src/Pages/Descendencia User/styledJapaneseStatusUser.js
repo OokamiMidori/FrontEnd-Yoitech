@@ -51,4 +51,9 @@ select{
 .japones{
     width: 243px;
 }
+.comFilhos{
+    min-width: 600px;
+    flex-direction: row;
+    display: flex;
+}
 `

@@ -22,7 +22,7 @@ export const DetailUserPage = () => {
     const { startDate, setStartDate, genero, setGenero, name, setName, nacionalidade, setNacionalidade, phone, setPhone, estadoCivil, setEstadoCivil } = context
 
     const optionsGender = [
-        { value: "", name: "H/M/NDA" },
+        { value: "", name: "Não" },
         { value: "Male", name: "Homem" },
         { value: "Female", name: "Mulher" },
         { value: "NDA", name: "Não declarado" }
@@ -194,13 +194,13 @@ export const DetailUserPage = () => {
 
                 <DataInput>
                     <div>Data de Nascimento</div>
-                    <SingleDatepicker name="date-input" date={startDate} onDateChange={setStartDate} />
+                    <input type="date" placeholder="DD/MM/AAA" name='start Date' value={startDate} className="data" onChange={(e) => setStartDate(e.target.value)} />
                 </DataInput>
                 <SNE>
                     <div>
                         <span>Sexo</span>
                         <select
-                            label="H/M/NDA"
+                            label=" "
                             name="Genero"
                             value={genero}
                             onChange={(e) => setGenero(e.target.value)}
@@ -220,6 +220,7 @@ export const DetailUserPage = () => {
                             value={nacionalidade}
                             onChange={(e) => setNacionalidade(e.target.value)}
                         >
+
                             {Nacionalidade.map((a) => (
                                 <option value={a.nome}>{a.nome}</option>
                             ))}
