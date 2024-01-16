@@ -9,7 +9,7 @@ import box_delete from "../../assets/delete.svg"
 import next from "../../assets/next-3.svg"
 import CameraCapture from "../../components/CameraCapture/CameraCapture";
 import upload from "../../assets/download-tray.svg"
-import { ImgFrame, UserUploadCompanyContainer } from "./UploadImgCompanyStyled";
+import { ImgFrame, ImgUpadaContainer, UserUploadCompanyContainer, } from "./UploadImgCompanyStyled";
 import { NextAndBackImg } from "../Signup User/styledSigUpUser";
 import back from "../../assets/return-2.svg"
 
@@ -18,19 +18,23 @@ export const ImgCompanyPage = () =>{
         const [capturedImage, setCapturedImage] = useState(null);
         const [uploadedImage, setUploadedImage] = useState(null);
         const [isImageCropperOpen, setImageCropperOpen] = useState(false);
+        const [imagemUpada, setImagemUpada] = useState(false)
     
     
         const handlePhotoCapture = (imageData) => {
             setCapturedImage(imageData);
+            setImagemUpada(false)
         };
     
         const handleImageUpload = (imageData) => {
             setUploadedImage(imageData);
+            setImagemUpada(true)
         };
     
         const cancelImagem = () => {
             setUploadedImage(null);
             setCapturedImage(null);
+            setImagemUpada(false)
         }
     return(
 <StyledUserUploadImgPage>
@@ -52,9 +56,11 @@ export const ImgCompanyPage = () =>{
                         <CameraCapture onPhotoCapture={handlePhotoCapture} />
                     </ContainerUploadOpcoes>
                 </div>
-                <ImgFrame onClick={() => setImageCropperOpen(true)} backgroundImage={capturedImage || uploadedImage} >
+               {imagemUpada? <ImgUpadaContainer backgroundImage={uploadedImage}>
+                    
+               </ImgUpadaContainer> : <ImgFrame onClick={() => setImageCropperOpen(true)} backgroundImage={capturedImage} >
                    <img src={upload}/>
-                </ImgFrame>
+                </ImgFrame>}
                 {isImageCropperOpen && (
                     <ImageCropperModal
                         backgroundImage={capturedImage || uploadedImage}

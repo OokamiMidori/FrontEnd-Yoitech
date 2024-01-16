@@ -67,6 +67,34 @@ export const FotoFrame = styled.div`
 
 `;
 
+export const FotoFrameUpada = styled.div`
+  width: 185.7px;
+  height: 195.3px;
+  border-color: rgba(72, 75, 77, 0.47);
+  border-width: 14.285710334777832px;
+  border-style: solid;
+  border-radius: 14.285710334777832px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+  background-image: ${(props) =>
+    props.backgroundImage
+      ? `url(${props.backgroundImage
+        })`
+      : 'none'};
+  background-size: cover;
+  background-position: center;
+
+  img{
+    background: none;
+  max-height:80%
+  
+  }
+`
+
 
 
 export const StyledOpcoesImage = styled.div`

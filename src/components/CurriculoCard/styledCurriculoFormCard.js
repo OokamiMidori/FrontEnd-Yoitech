@@ -26,6 +26,15 @@ div{
 img{
     background-color: white;
 }
+.titulo{
+    font-size: x-large;
+    color: #707070;
+}
+select{
+    width: 370px;
+    height: 50px;
+    padding: 0px 5px;
+}
 `
 
 export const VagaNomeFabrica = styled.div`
@@ -60,6 +69,9 @@ flex-direction: column;
 width: 100%;
 background-color: white;
 input{
+    width: 100%;
+}
+select{
     width: 100%;
 }
 `

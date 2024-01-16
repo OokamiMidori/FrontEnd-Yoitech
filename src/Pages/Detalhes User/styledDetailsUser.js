@@ -60,6 +60,7 @@ padding-left: 88px;
 input{
     background-color: #DDDDDD;
     text-align: center;
+    height: 45px;
 }
 div{
     background-color: white;

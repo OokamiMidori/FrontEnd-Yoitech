@@ -5,15 +5,18 @@ import { SelectCard, UserHabilitacaoCard, UserHabilitacaoPageStyled } from "./st
 import next from "../../assets/next-3.svg"
 import returne from "../../assets/return-2.svg"
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { goToUserAdressPage, goToUserJapaneseLevel } from "../../routes"
+import { UserContext } from "../../contexts/UserContext"
 
 export const UserHabilitacaoPage = () => {
     const navigate = useNavigate()
-    const [habilitacao, setHabilitacao] = useState("")
-    const [transporte, setTransporte] = useState("")
-    const [escolaridade, setEscolaridade] = useState("")
-    const [profissionalHabilitacao, setProfissionalHabilitacao] = useState("")
+    // const [habilitacao, setHabilitacao] = useState("")
+    // const [transporte, setTransporte] = useState("")
+    // const [escolaridade, setEscolaridade] = useState("")
+    // const [profissionalHabilitacao, setProfissionalHabilitacao] = useState("")
+    const context = useContext(UserContext)
+    const {habilitacao, setHabilitacao, transporte, setTransporte, escolaridade, setEscolaridade, profissionalHabilitacao, setProfissionalHabilitacao} = context
 
     const grauDeEscolaridade = [
         { name: "Tipo" },
@@ -38,7 +41,6 @@ export const UserHabilitacaoPage = () => {
     ]
 
     const habilitacaoArray = [
-        { name: "Tipo" },
         { name: "Não" },
         { name: "Carro AT/MT" },
         { name: "Caminhão de pequeno porte" },
@@ -65,7 +67,7 @@ export const UserHabilitacaoPage = () => {
             <UserHabilitacaoCard>
                 <h1>Cadastro</h1>
                 <SelectCard>
-                    <div>Possui Habilitação de carro ou moto no Japão?</div>
+                    <div>Possui Habilitação?</div>
                     <select placeholder="Tipo"
                         value={habilitacao}
                         onChange={(e) => setHabilitacao(e.target.value)}
@@ -74,7 +76,7 @@ export const UserHabilitacaoPage = () => {
                             return <option value={a.name}>{a.name}</option>
                         })}
                     </select>
-                    <div>Possui algum meio de transporte?</div>
+                    <div>Possui meio de transporte?</div>
                     <select
                         value={transporte}
                         onChange={(e) => setTransporte(e.target.value)}
